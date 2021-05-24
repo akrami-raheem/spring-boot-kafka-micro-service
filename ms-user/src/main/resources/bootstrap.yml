@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ms-pos
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ms-config-server
+  kafka:
+    topic:
+      pos:
+        transactions: POS_TRANSACTIONS
+    bootstrap:
+      servers: http://localhost:9092/
